@@ -160,13 +160,15 @@ class Program
     static bool Login()
 {
     Console.Write("Enter username: ");
+    
     string username = Console.ReadLine();
+     
      Console.Write("Enter password: ");
     string password = ReadPassword();
      // For simplicity, let's assume "admin" as the valid username and a hashed version of password
     string hashedPassword = ComputeSha256Hash(password); // You need to implement this method to compute SHA256 hash
      // Ideally, the hashed password should be stored securely and retrieved for comparison
-    string storedHashedPassword = "hashed version of 'admin'";
+    string storedHashedPassword = "admin";
      if (username == "admin" && hashedPassword == storedHashedPassword)
     {
         return true;
